@@ -11,7 +11,7 @@ Welcome to the 100 Days of Code project! This project is designed to help you tr
 
 # Usage
 
-- Here is the hosted site: []
+- Here is the hosted site: [100 Days of Code](https://estif0.github.io/100-days-of-code/)
 
 ## Contributing
 
@@ -20,14 +20,5 @@ Contributions are welcome! If you have suggestions for improvements or find any 
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Contact
-
-If you have any questions or need further assistance, feel free to reach out. You can find me on GitHub or via email.
-
-## Acknowledgments
-
-- Thanks to all the contributors who have helped improve this project.
-- Special thanks to the coding community for their support and encouragement.
 
 Happy coding!
