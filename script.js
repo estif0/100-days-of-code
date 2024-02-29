@@ -5,17 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generate cards
     for (let i = 0; i <= 99; i++) {
         const card = document.createElement('div');
-        card.classList.add('card');
+        card.className = 'card';
         card.textContent = i;
-        card.addEventListener('click', () => {
-            card.classList.toggle('ticked');
-            if (card.classList.contains('ticked')) {
-                tickedNumbers.push(i);
-            } else {
-                tickedNumbers = tickedNumbers.filter(num => num !== i);
-            }
-            localStorage.setItem('tickedNumbers', JSON.stringify(tickedNumbers));
-        });
+        card.onclick = () => toggleCard(card, i);
         cardContainer.appendChild(card);
     }
 
@@ -26,4 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('ticked');
         }
     });
+
+    function toggleCard(card, num) {
+        card.classList.toggle('ticked');
+        const index = tickedNumbers.indexOf(num);
+        if (card.classList.contains('ticked')) {
+            if (index === -1) {
+                tickedNumbers.push(num);
+            }
+        } else {
+            if (index !== -1) {
+                tickedNumbers.splice(index, 1);
+            }
+        }
+        localStorage.setItem('tickedNumbers', JSON.stringify(tickedNumbers));
+    }
 });
