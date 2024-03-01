@@ -7,13 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'card';
         card.textContent = i;
+        card.dataset.number = i; // Add a data-number attribute
         card.onclick = () => toggleCard(card, i);
         cardContainer.appendChild(card);
     }
 
     // Load ticked numbers from localStorage
     tickedNumbers.forEach(num => {
-        const card = document.querySelector(`.card:contains(${num})`);
+        const card = document.querySelector(`.card[data-number="${num}"]`);
         if (card) {
             card.classList.add('ticked');
         }
