@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const card = document.createElement('div');
         card.className = 'card';
         card.textContent = i;
-        card.dataset.number = i; // Add a data-number attribute
+        card.dataset.number = i;
         card.onclick = () => toggleCard(card, i);
         cardContainer.appendChild(card);
     }
